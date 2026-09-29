@@ -1,0 +1,116 @@
+/* ---------- Work hero ---------- */
+
+.work-hero__title {
+  margin-top: 1.6rem;
+  max-width: 12ch;
+}
+
+.work-hero__copy {
+  margin-top: 2rem;
+  max-width: 52ch;
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+}
+
+/* ---------- Services rows ---------- */
+
+.work-services {
+  padding-block: 0 var(--section-y);
+}
+
+.work-services__row {
+  border-top: 1px solid var(--color-line);
+}
+
+.work-services__row:last-child {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.work-services__item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2.5rem, 6vw, 6rem);
+  padding-block: clamp(3.5rem, 7vh, 6rem);
+  align-items: start;
+}
+
+.work-services__title {
+  font-size: clamp(2.4rem, 5.5vw, 4.5rem);
+  letter-spacing: -0.035em;
+  line-height: 1;
+}
+
+.work-services__sub {
+  color: var(--color-grey);
+}
+
+.work-services__desc {
+  margin-top: 1.4rem;
+  max-width: 40ch;
+  font-size: 0.98rem;
+}
+
+.work-services__item .text-link {
+  margin-top: 1.6rem;
+}
+
+.work-services__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--color-line);
+}
+
+.work-services__list-item {
+  display: flex;
+  align-items: baseline;
+  gap: 1.4rem;
+  padding-block: 1.05rem;
+  border-bottom: 1px solid var(--color-line-light);
+  transition: padding-left 0.4s var(--ease-out), background 0.4s var(--ease-out);
+}
+
+.work-services__item:hover .work-services__list-item {
+  padding-left: 0.4rem;
+}
+
+.work-services__list-num {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-yellow);
+  flex-shrink: 0;
+}
+
+.work-services__list-label {
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  position: relative;
+}
+
+.work-services__list-label::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: var(--color-yellow);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s var(--ease-out);
+}
+
+.work-services__item:hover .work-services__list-label::after {
+  transform: scaleX(1);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 860px) {
+  .work-services__item {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

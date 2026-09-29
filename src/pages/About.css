@@ -1,0 +1,140 @@
+/* ---------- About hero ---------- */
+
+.about-hero__title {
+  margin-top: 1.6rem;
+  max-width: 14ch;
+}
+
+.about-hero__copy {
+  margin-top: 2rem;
+  max-width: 52ch;
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+}
+
+/* ---------- Who we are ---------- */
+
+.about-who__grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: start;
+}
+
+.about-who__lead {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+  line-height: 1.65;
+}
+
+.about-who__side {
+  border-left: 1px solid var(--color-line);
+  padding-left: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.about-who__label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-grey);
+  margin-bottom: 1.4rem;
+}
+
+.about-who__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-who__list li {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding-block: 0.85rem;
+  border-bottom: 1px solid var(--color-line-light);
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.about-who__mark {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-yellow);
+  flex-shrink: 0;
+}
+
+/* ---------- Philosophy ---------- */
+
+.about-philosophy__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-philosophy__item {
+  display: grid;
+  grid-template-columns: 4rem 1fr 1fr;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: baseline;
+  padding-block: clamp(1.8rem, 4vh, 3rem);
+  border-top: 1px solid var(--color-line-dark);
+}
+
+.about-philosophy__item:last-child {
+  border-bottom: 1px solid var(--color-line-dark);
+}
+
+.about-philosophy__index {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-yellow);
+}
+
+.about-philosophy__title {
+  font-size: clamp(1.8rem, 4.5vw, 3.4rem);
+  letter-spacing: -0.03em;
+}
+
+.about-philosophy__desc {
+  max-width: 34ch;
+  font-size: 1rem;
+}
+
+/* ---------- Closing statement ---------- */
+
+.about-close__statement {
+  max-width: 34ch;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 860px) {
+  .about-who__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-who__side {
+    border-left: none;
+    border-top: 1px solid var(--color-line);
+    padding-left: 0;
+    padding-top: 2rem;
+  }
+
+  .about-philosophy__item {
+    grid-template-columns: 2.5rem 1fr;
+  }
+
+  .about-philosophy__desc {
+    grid-column: 2;
+  }
+}

@@ -1,0 +1,73 @@
+.cta {
+  padding-block: clamp(4.5rem, 9vh, 7rem);
+}
+
+.cta--yellow {
+  background: var(--color-offwhite);
+  color: var(--color-black);
+}
+
+.cta--black {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.cta__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(2rem, 5vh, 3.5rem);
+}
+
+.cta--yellow .cta__inner {
+  border: 1.5px solid var(--color-yellow);
+  border-radius: 24px;
+  padding: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.cta__plate {
+  background: transparent;
+  border-radius: 14px;
+  width: fit-content;
+}
+
+.cta--black .cta__plate {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--color-line-dark);
+  padding: 1.1rem 1.5rem;
+}
+
+.cta__logo {
+  height: 40px;
+  width: auto;
+}
+
+.cta__title {
+  max-width: 16ch;
+  font-size: clamp(2.4rem, 6vw, 5rem);
+  letter-spacing: -0.035em;
+}
+
+.cta--yellow .cta__btn {
+  background: var(--color-black);
+  color: var(--color-white);
+  border-color: var(--color-black);
+}
+
+.cta--yellow .cta__btn:hover {
+  background: var(--color-yellow);
+  border-color: var(--color-yellow);
+  color: var(--color-black);
+}
+
+.cta--black .cta__btn {
+  background: var(--color-white);
+  color: var(--color-black);
+  border-color: var(--color-white);
+}
+
+.cta--black .cta__btn:hover {
+  background: var(--color-yellow);
+  border-color: var(--color-yellow);
+  color: var(--color-black);
+}
